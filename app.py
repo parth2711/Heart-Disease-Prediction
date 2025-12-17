@@ -3,11 +3,13 @@ import numpy as np
 import pandas as pd
 import pickle
 
-with open('model.pkl','rb') as f:
-    model=pickle.load(f)
-with open('scaler.pkl','rb') as f:
-    scaler=pickle.load(f)
+#loading the model and scaler
+with open('model.pkl','rb') as file:
+    model=pickle.load(file)
+with open('scaler.pkl','rb') as file2:
+    scaler=pickle.load(file2)
 
+#proceeding with ui
 st.title('Heart Disease Detection')
 
 st.markdown("""
